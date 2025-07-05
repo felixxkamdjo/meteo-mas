@@ -13,3 +13,13 @@
   --primary-color: #c4dff7;
   --secondary-color: #ebf2f8;
 }
+
+html, body {
+  height: 100%;
+}
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
