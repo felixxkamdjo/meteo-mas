@@ -2,7 +2,6 @@
 const AboutApp = () => {
     return (
         <>
-          
             <h1 className="text-4xl font-bold text-[var(--navy-blue)] mb-5">About the App</h1>
             <div className="flex flex-col gap-4">
                 <p className="text-justify"> 
@@ -19,7 +18,6 @@ const AboutApp = () => {
                     Recusandae libero provident mollitia praesentium officiis? Fugiat esse aliquid beatae quo, quaerat voluptatem neque labore aspernatur reprehenderit voluptas, adipisci, vero dolorem distinctio? Explicabo illum nulla vitae voluptate iusto minus dicta?
                 </p>
             </div>
-          
         </>
     )
 }
