@@ -1,10 +1,10 @@
 // api/services/index.js
 
 // On importe chaque service individuellement
-export { default as fetchData } from './fetchData';
+export { fetchData } from './fetchData.js';
 
 // geoLocation
-export { getCurrentLocation } from './getCurrentLocation'
+export { getCurrentLocation } from './getCurrentLocation.js'
 
 // Weather
-export { fetchAndLogWeather, getWeatherData, getCurrentLocationWeather, getCityLocationWeather } from './weatherService';
+export { fetchAndLogWeather, getWeatherData, getCurrentLocationWeather, getCityLocationWeather } from './weatherService.js';

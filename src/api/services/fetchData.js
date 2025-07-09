@@ -1,6 +1,6 @@
-import API_CONFIG from '../config/API_CONFIG';
+import { API_CONFIG } from '../config/API_CONFIG.js';
 
-const fetchData = async (endpoint, params = {}) => {
+export const fetchData = async (endpoint, params = {}) => {
     const url = new URL(`${API_CONFIG.BASE_URL}/${endpoint}`);
 
     // Ajoute les paramètres par défaut et ceux passés en argument
@@ -24,5 +24,3 @@ const fetchData = async (endpoint, params = {}) => {
     }
 
 };
-
-export default fetchData;

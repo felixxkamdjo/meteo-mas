@@ -1,7 +1,7 @@
-import DayForecast from "../components/DayForecast";
+import DayForecastList from "../components/DayForecastList";
 import Event from "../components/event";
 import Header from "../components/Header"
-import WeatherCard from "../components/WeatherCard";
+import WeatherCardList from "../components/WeatherCardList";
 import WeatherTopCard from "../components/WeatherTopCard";
 import WeekForecast from "../components/WeekForecast";
 
@@ -15,14 +15,7 @@ const Home = () => {
                     <WeatherTopCard />
                     <div className="flex flex-row w-full justify-between gap-2">
                         <div className="flex flex-col gap-2 w-full">
-                            <div className="flex flex-row justify-between gap-3 w-full">
-                                <div className="col-1 w-full"><WeatherCard /></div>
-                                <div className="col-1 w-full"><WeatherCard /></div>
-                            </div>
-                            <div className="flex flex-row justify-between gap-3 w-full">
-                                <div className="col-1 w-full"><WeatherCard /></div>
-                                <div className="col-1 w-full"><WeatherCard /></div>
-                            </div>
+                            <WeatherCardList />
                         </div>
                         <div><Event /></div>
                     </div>
@@ -41,21 +34,12 @@ const Home = () => {
                     <div className="flex flex-col gap-2">
                         <h1 className="text-2xl font-bold">Today</h1>
                         <div className="flex flex-row w-full justify-between gap-2">
-                            <DayForecast />
-                            <DayForecast />
-                            <DayForecast />
-                            <DayForecast />
+                            <DayForecastList />
                         </div>
                     </div>
                     <div className="flex flex-col gap-2">
                         <h1 className="text-2xl font-bold">07 Days Forecast</h1>
                         <div className="flex flex-col w-full justify-between gap-2">
-                            <WeekForecast />
-                            <WeekForecast />
-                            <WeekForecast />
-                            <WeekForecast />
-                            <WeekForecast />
-                            <WeekForecast />
                             <WeekForecast />
                         </div>
                     </div>
