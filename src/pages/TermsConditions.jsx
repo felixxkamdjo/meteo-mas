@@ -80,7 +80,7 @@ const TermsConditions = () => {
         <div>
             <h2 className="text-xl font-semibold mb-2">3. Propriété intellectuelle</h2>
             <p>
-            Tous les contenus de l’application, y compris le texte, les logos, les icônes, les images et les logiciels, sont la propriété de <span className="font-bold">WeatherWise</span> ou de ses partenaires. Toute reproduction ou utilisation non autorisée est interdite.
+            Tous les contenus de l’application, y compris le texte, les logos, les icônes, les images et les logiciels, sont la propriété de <span className="font-bold">Meteo-mas</span> ou de ses partenaires. Toute reproduction ou utilisation non autorisée est interdite.
             </p>
         </div>
         </section>
@@ -95,7 +95,7 @@ const TermsConditions = () => {
             <div>
                 <h2 className="text-xl font-semibold mb-2">4. Limitation de responsabilité</h2>
                 <p className="mb-6">
-                Nous nous efforçons de fournir des prévisions météo précises, mais nous ne garantissons pas l'exactitude absolue de nos données. WeatherWise ne saurait être tenu responsable des pertes ou dommages découlant de l'utilisation de ses services.
+                Nous nous efforçons de fournir des prévisions météo précises, mais nous ne garantissons pas l'exactitude absolue de nos données. Meteo-mas ne saurait être tenu responsable des pertes ou dommages découlant de l'utilisation de ses services.
                 </p>
             </div>
         </section>
@@ -164,7 +164,7 @@ const TermsConditions = () => {
             </div>  
         </section>
 
-        <p className="mt-2 font-medium">📧 support@weatherwise.com</p>
+        <p className="mt-2 font-medium">📧 groupeMeteo@gmail.com</p>
       </section>
     </div>
         </>
