@@ -8,7 +8,7 @@ const DropdownButton = () => {
     <Menu>
       {({ open }) => (
         <>
-          <MenuButton className="fixed top-4 left-4 z-50 p-2 rounded-md bg-white shadow-md">
+          <MenuButton className=" top-4 left-4 z-50 p-2 rounded-md bg-white shadow-md">
             <Bars3Icon className="h-6 w-6 text-gray-700" aria-hidden="true" />
           </MenuButton>
 
