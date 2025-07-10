@@ -1,64 +1,49 @@
-import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+import { Menu, MenuButton, MenuItems } from '@headlessui/react'
 import { Bars3Icon } from '@heroicons/react/20/solid'
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 const DropdownButton = () => {
   return (
-    <>
-        <Menu as="div" className="relative inline-block text-left">
-            <div>
-                <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50">
-                    <Bars3Icon aria-hidden="true" className="size-5 text-gray-400" />
-                </MenuButton>
-            </div>
+    <Menu>
+      {({ open }) => (
+        <>
+          <MenuButton className="fixed top-4 left-4 z-50 p-2 rounded-md bg-white shadow-md">
+            <Bars3Icon className="h-6 w-6 text-gray-700" aria-hidden="true" />
+          </MenuButton>
 
-            <MenuItems transition className="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 transition focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">
-                <div className="py-1">
-                    <MenuItem>
-                        <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden">
-                        Home
-                        </a>
-                    </MenuItem>
-                    <MenuItem>
-                        <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden">
-                        Maps
-                        </a>
-                    </MenuItem>
-                </div>
-                <div className="py-1">
-                    <MenuItem>
-                        <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden">
-                        About App
-                        </a>
-                    </MenuItem>
-                    <MenuItem>
-                        <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden">
-                        Terms conditions
-                        </a>
-                    </MenuItem>
-                </div>
-                <div className="py-1">
-                    <MenuItem>
-                        <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden">
-                        Privacy Policy
-                        </a>
-                    </MenuItem>
-                    <MenuItem>
-                        <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden">
-                        Contact us
-                        </a>
-                    </MenuItem>
-                </div>
-                <div className="py-1">
-                    <MenuItem>
-                        <a href="#" className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden">
-                        Settings
-                        </a>
-                    </MenuItem>
-                </div>
-            </MenuItems>
-        </Menu>
-    </>
+          {/* Sidebar qui glisse */}
+          <div
+            className={`fixed top-0 left-0 h-full w-60 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-40
+              ${open ? 'translate-x-0' : '-translate-x-full'}`}
+          >
+            <nav className="mt-16 flex flex-col space-y-4 px-4">
+              <Link to="/" className="text-gray-700 hover:bg-gray-100 px-3 py-2 rounded" >
+                Home
+              </Link>
+              <Link to="/AboutApp" className="text-gray-700 hover:bg-gray-100 px-3 py-2 rounded" >
+                About
+              </Link>
+              <Link to="/PrivacyPolicy" className="text-gray-700 hover:bg-gray-100 px-3 py-2 rounded" >
+                Privacy Policy
+              </Link>
+              <Link to="/TersConditions" className="text-gray-700 hover:bg-gray-100 px-3 py-2 rounded" >
+                Terms & Conditions
+              </Link>
+            </nav>
+          </div>
+
+          {/* Overlay sombre quand menu ouvert */}
+          {open && (
+            <div
+              className="fixed inset-0 bg-black opacity-30 z-30"
+              aria-hidden="true"
+            />
+          )}
+        </>
+      )}
+    </Menu>
   )
 }
 
-export default DropdownButton;
+export default DropdownButton
